@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aula Virtual - Ingreso</title>
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+margin:0;
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg, #1e3c72, #2a5298);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.login-card{
+background:white;
+width:100%;
+max-width:420px;
+padding:40px;
+border-radius:18px;
+box-shadow:0 15px 35px rgba(0,0,0,0.25);
+text-align:center;
+}
+
+.logo-login img{
+width:120px;
+height:auto;
+margin-bottom:10px;
+}
+
+.login-card h2{
+margin:10px 0 5px;
+color:#1e3c72;
+}
+
+.login-card p{
+color:#666;
+font-size:14px;
+margin-bottom:20px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:10px;
+outline:none;
+font-size:14px;
+}
+
+input:focus{
+border-color:#2a5298;
+box-shadow:0 0 5px rgba(42,82,152,0.3);
+}
+
+
+.btn-login{
+width:100%;
+padding:12px;
+background:#2a5298;
+color:white;
+border:none;
+border-radius:10px;
+font-size:15px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn-login:hover{
+background:#1e3c72;
+}
+
+
+.links{
+margin-top:15px;
+font-size:13px;
+}
+
+.links a{
+color:#2a5298;
+text-decoration:none;
+}
+
+
+
+.check{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:13px;
+  color:#444;
+  margin-top:5px;
+}
+.check input{
+  margin: 0;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="login-card">
+
+<div class="logo-login">
+  <img src="img/logo.png" alt="Logo institucional">
+</div>
+
+<h2>Aula Virtual</h2>
+<p>Colegio Pedagógico María Montessori</p>
+
+<!-- 🔐 LOGIN -->
+<form onsubmit="return login(event)">
+
+<input type="text" id="usuario" placeholder="Usuario institucional" required>
+
+<input type="password" id="password" placeholder="Contraseña" required>
+
+<label class="check">
+  <input type="checkbox" onclick="mostrarPassword()">
+  Mostrar contraseña
+</label>
+
+<button type="submit" class="btn-login">
+Ingresar al sistema
+</button>
+
+</form>
+
+<div class="links">
+<p><a href="#">¿Olvidó su contraseña?</a></p>
+</div>
+
+</div>
+
+<script>
+
+function login(event){
+event.preventDefault();
+
+const user = document.getElementById("usuario").value.trim();
+const pass = document.getElementById("password").value.trim();
+
+if(user === "estudiante" && pass === "1234"){
+window.location.href = "perfil.html";
+}else{
+alert("Usuario o contraseña incorrectos");
+}
+}
+
+function mostrarPassword(){
+const campo = document.getElementById("password");
+campo.type = campo.type === "password" ? "text" : "password";
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
