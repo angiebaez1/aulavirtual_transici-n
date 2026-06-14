@@ -1,0 +1,590 @@
+/* ===================================
+AULA VIRTUAL TRANSICIÓN
+COLEGIO PEDAGÓGICO MARÍA MONTESSORI
+=================================== */
+
+:root{
+
+--azul:#2563EB;
+--verde:#22C55E;
+--amarillo:#FACC15;
+--naranja:#FB923C;
+--blanco:#FFFFFF;
+--gris-claro:#F8FAFC;
+--gris:#64748B;
+--texto:#334155;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    body{
+    background: linear-gradient(
+        to bottom,
+        #dbeafe,
+        #bfdbfe
+    );
+}
+    );
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+header{
+background:linear-gradient(
+135deg,
+var(--azul),
+var(--verde)
+);
+color:white;
+padding:5px 5px;
+box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:left;
+
+    justify-content:left;
+    gap:0px;
+    margin-top:0px;
+
+}
+.logo-circulo {
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.logo-img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    display:block;
+    margin:0;
+filter: drop-shadow(0 3px 5px rgba(0,0,0,0.3));
+}
+.logo-text h1{
+    margin:30;
+    color:white;
+}
+
+.logo-text p{
+    margin-top:0px;
+    color:white;
+}
+
+.logo-login img{
+  width: 180px;
+  max-width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+border-radius: 50%;
+
+box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+}
+
+.menu-principal{
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:12px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+}
+
+.menu-principal a{
+
+    text-decoration:none;
+
+    color:var(--azul);
+
+    font-weight:600;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    transition:.3s;
+
+}
+
+.menu-principal a:hover{
+
+    background:#e0f2fe;
+
+}
+
+.hero{
+padding:80px 30px;
+text-align:center;
+background:white;
+}
+
+.hero-banner{
+
+height:300px;
+
+background-size:contain;
+
+background-repeat:no-repeat;
+
+background-position:center;
+
+background-color:white;
+
+
+}
+.hero h2{
+font-size:42px;
+color:var(--azul);
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:800px;
+margin:auto;
+font-size:18px;
+}
+
+
+.section{
+padding:50px 10%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:30px;
+color:var(--azul);
+}
+
+.card{
+background:#92c5fc;
+padding:25px;
+border-radius:20px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:var(--verde);
+color:#0E0E55;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+footer{
+background:var(--azul);
+color:white;
+padding:30px;
+text-align:center;
+margin-top:50px;
+}
+
+.sidebar{
+width:250px;
+height:100vh;
+background:var(--azul);
+position:fixed;
+left:0;
+top:0;
+padding:25px;
+color:white;
+}
+
+.sidebar h2{
+margin-bottom:30px;
+}
+
+.sidebar a{
+display:block;
+color:white;
+text-decoration:none;
+padding:12px;
+margin-bottom:10px;
+border-radius:10px;
+}
+
+.sidebar a:hover{
+background:rgba(255,255,255,.15);
+}
+
+.main{
+margin-left:270px;
+padding:30px;
+}
+
+.table{
+width:100%;
+border-collapse:collapse;
+background:white;
+}
+
+.table th,
+.table td{
+padding:15px;
+border:1px solid #e2e8f0;
+}
+
+.table th{
+background:#eff6ff;
+}
+
+.form-group{
+margin-bottom:20px;
+}
+
+input,
+textarea,
+select{
+width:100%;
+padding:12px;
+border:1px solid #cbd5e1;
+border-radius:10px;
+}
+
+@media(max-width:768px){
+
+.sidebar{
+position:relative;
+width:100%;
+height:auto;
+}
+
+.main{
+margin-left:0;
+}
+
+nav{
+flex-wrap:wrap;
+}
+
+.hero h2{
+font-size:28px;
+}
+
+}
+/* ===========================
+   BANNER PRINCIPAL
+=========================== */
+
+.hero-banner{
+  height:350px;
+  background-image:url('../img/banner.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center 35%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+
+.hero-overlay{
+background:rgba(0,0,0,.45);
+padding:50px;
+border-radius:20px;
+text-align:center;
+color:white;
+max-width:700px;
+}
+
+.hero-overlay h2{
+
+font-size:50px;
+
+margin-bottom:20px;
+
+}
+
+.hero-overlay p{
+
+font-size:22px;
+
+margin-bottom:25px;
+
+}
+
+/* ===========================
+   TARJETAS MODERNAS
+=========================== */
+
+.card{
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+ .login-card{
+  width: 100%;
+  max-width: 450px; /* 🔒 esto evita que crezca */
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   AVISOS
+=========================== */
+
+.aviso-rojo{
+
+border-left:8px solid #ef4444;
+
+}
+
+.aviso-verde{
+
+border-left:8px solid #22c55e;
+
+}
+
+.aviso-amarillo{
+
+border-left:8px solid #facc15;
+
+}
+
+/* ===========================
+   DOCENTES
+=========================== */
+
+.docente{
+
+text-align:center;
+
+}
+
+.docente img{
+
+width:150px;
+
+height:150px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+margin-bottom:15px;
+
+border:5px solid #0E0E55;
+
+}
+.nombre-docente{
+  color: #2a5298; /* azul institucional */
+  margin: 10px 0 5px;
+}
+
+.cargo-docente{
+  color: black;
+  margin: 0;
+  font-size: 14px;
+}
+header{
+    background:linear-gradient(135deg,#2563EB,#22C55E);
+    color:white;
+    padding:8px 30px;
+}
+
+.check{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* 👈 lo manda a la derecha */
+  gap: 8px;
+  font-size: 13px;
+  color: #444;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.info-curso{
+  text-align: left;
+}
+
+.intro-curso{
+  margin-bottom: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.dimensiones{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.item{
+  background: #f4f7fb;
+  padding: 10px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.item:hover{
+  background: #96D9C0;
+  transform: translateX(5px);
+}
+
+.item span{
+  color: #0E0E55;
+  font-weight: 500;
+}
+
+.check input{
+  margin: 0;
+  width: auto;
+  transform: scale(1.1);
+}
+
+.contact-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.contact-card{
+  background: #77B1D4;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.contact-card:hover{
+  transform: translateY(-5px);
+}
+
+.contact-card h3{
+  margin-bottom: 10px;
+  color: #2a5298;
+}
+
+.contact-card p{
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  margin: 40px 0;   /* menos separación */
+  padding: 20px 0;
+}
+
+.section + .section{
+  margin-top: 10px;
+} 
+
+.section-title{
+  margin-bottom: 10px;
+
+
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card, .contact-card {
+  transition: all 0.3s ease;
+}
+
+.card:hover, .contact-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.menu-principal a {
+  transition: all 0.3s ease;
+}
+
+.menu-principal a:hover {
+  transform: translateY(-2px);
+  color: #2a5298;
+}
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+}
+
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.btn-login{
+    background: #ffffff;
+    color: #1565c0;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+}
+body{
+    background: linear-gradient(
+        to bottom,
+        #f8fbff,
+        #eef5ff
+    );
+}
+
+.btn-login:hover{
+    background-color: #f0f0f0;
+}
